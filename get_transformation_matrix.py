@@ -18,13 +18,13 @@ def get_transformation_matrix(F, K):
     # Make sure U and V's det is positive for it to be a rotation matrix
     if np.linalg.det(U) < 0:
         U *= -1
-    if np.linalg.det(Vt) < 0:
-        Vt *= -1
+    if np.linalg.det(V) < 0:
+        V *= -1
  
     # Compute the rotation matrix
     R = U @ W @ Vt
     if np.trace(R) < 0:
-        R = U @ W.T @ Vt
+        R = U @ W.T @ V
  
     # Get translation vector t from U (3rd column)
     t = U[:, 2]
