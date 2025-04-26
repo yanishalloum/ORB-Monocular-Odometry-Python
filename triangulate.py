@@ -21,10 +21,10 @@ def triangulate(pose1, pose2, pts1, pts2):
         A[3] = p[1][1] * pose2[2] - pose2[1]
  
         # SVD on A
-        _, _, vt = np.linalg.svd(A)
+        _, _, V = np.linalg.svd(A)
  
         # Solution the smallest singular value
-        3D_res[i] = vt[3]
+        3D_res[i] = V[3]
  
     # Return the 3D points in homogeneous coordinates
     return 3D_res
