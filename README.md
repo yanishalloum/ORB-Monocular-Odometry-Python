@@ -4,10 +4,9 @@
 
 
 # 1. Prerequisites
-Tested in **Ubuntu 20.04**'
+Tested in **Ubuntu 20.04**
 
-## C++11 or C++0x Compiler
-We use the new thread and chrono functionalities of C++11.
+## C++13 Compiler
 
 ## Pangolin
 The library [Pangolin](https://github.com/stevenlovegrove/Pangolin) is used for visualization and user interface. 
